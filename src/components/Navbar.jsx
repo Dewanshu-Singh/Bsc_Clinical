@@ -11,49 +11,51 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       style={{ 
-      backgroundColor: 'rgba(251, 249, 246, 0.95)', 
+      backgroundColor: 'rgba(251, 249, 246, 0.96)', 
       backdropFilter: 'blur(10px)',
       padding: '0 24px', 
       height: '80px',
       display: 'flex', 
       justifyContent: 'space-between', 
       alignItems: 'center',
-      borderBottom: '1px solid rgba(0,0,0,0.05)',
+      borderBottom: '1px solid rgba(0,0,0,0.06)',
       position: 'sticky',
       top: 0,
       zIndex: 50
     }}>
       <div className="navbar-logos" style={{ display: 'flex', alignItems: 'center', gap: '16px', height: '100%' }}>
-        <img 
-          src="/logo2.png" 
-          alt="Suresh Gyan Vihar University Logo" 
-          style={{ 
-            height: '100px', 
-            objectFit: 'contain',
-            filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))'
-          }} 
-        />
+        <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
+          <img 
+            src="/logo2.png" 
+            alt="Suresh Gyan Vihar University Logo" 
+            style={{ 
+              height: '90px', 
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.08))'
+            }} 
+          />
+        </a>
         <img 
           src="/naac.png" 
           alt="NAAC Logo" 
-          style={{ height: '40px', objectFit: 'contain' }} 
+          style={{ height: '38px', objectFit: 'contain' }} 
         />
         <img 
           src="/nirf.png" 
           alt="NIRF Logo" 
-          style={{ height: '40px', objectFit: 'contain' }} 
+          style={{ height: '38px', objectFit: 'contain' }} 
         />
       </div>
       
       {/* Desktop Links */}
-      <div className="desktop-links" style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
-        <a href="#overview" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.95rem', fontWeight: 500 }}>Overview</a>
-        <a href="#advantage" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.95rem', fontWeight: 500 }}>Why SGVU</a>
-        <a href="#admission" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.95rem', fontWeight: 500 }}>Admission</a>
-        <a href="#curriculum" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.95rem', fontWeight: 500 }}>Curriculum</a>
-        <a href="#careers" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.95rem', fontWeight: 500 }}>Careers</a>
-        <a href="#campus" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.95rem', fontWeight: 500 }}>Campus</a>
-        <a href="#faq" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.95rem', fontWeight: 500 }}>FAQ</a>
+      <div className="desktop-links" style={{ display: 'flex', gap: '28px', alignItems: 'center' }}>
+        <a href="#about" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.92rem', fontWeight: 500, transition: 'color 0.2s' }}>About Course</a>
+        <a href="#learn" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.92rem', fontWeight: 500, transition: 'color 0.2s' }}>What You'll Learn</a>
+        <a href="#why-choose" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.92rem', fontWeight: 500, transition: 'color 0.2s' }}>Why Clinical Psychology</a>
+        <a href="#course-details" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.92rem', fontWeight: 500, transition: 'color 0.2s' }}>Course Details</a>
+        <a href="#careers" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.92rem', fontWeight: 500, transition: 'color 0.2s' }}>Careers</a>
+        <a href="#campus" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.92rem', fontWeight: 500, transition: 'color 0.2s' }}>Campus</a>
+        <a href="#faq" style={{ textDecoration: 'none', color: '#4b5563', fontSize: '0.92rem', fontWeight: 500, transition: 'color 0.2s' }}>FAQ</a>
       </div>
 
       {/* Desktop CTA */}
@@ -72,7 +74,8 @@ const Navbar = () => {
           borderRadius: '24px', 
           fontWeight: 600,
           cursor: 'pointer',
-          fontSize: '0.95rem'
+          fontSize: '0.95rem',
+          boxShadow: '0 4px 14px var(--primary-glow)'
         }}>
           Apply Now
         </motion.button>
@@ -83,6 +86,7 @@ const Navbar = () => {
         <button 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#0f172a' }}
+          aria-label="Toggle Navigation Menu"
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -104,18 +108,18 @@ const Navbar = () => {
               padding: '24px',
               display: 'flex',
               flexDirection: 'column',
-              gap: '24px',
-              boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
-              borderBottom: '1px solid rgba(0,0,0,0.05)'
+              gap: '20px',
+              boxShadow: '0 10px 24px rgba(0,0,0,0.1)',
+              borderBottom: '1px solid rgba(0,0,0,0.06)'
             }}
           >
-            <a href="#overview" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.1rem', fontWeight: 500 }}>Overview</a>
-            <a href="#advantage" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.1rem', fontWeight: 500 }}>Why SGVU</a>
-            <a href="#admission" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.1rem', fontWeight: 500 }}>Admission</a>
-            <a href="#curriculum" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.1rem', fontWeight: 500 }}>Curriculum</a>
-            <a href="#careers" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.1rem', fontWeight: 500 }}>Careers</a>
-            <a href="#campus" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.1rem', fontWeight: 500 }}>Campus</a>
-            <a href="#faq" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.1rem', fontWeight: 500 }}>FAQ</a>
+            <a href="#about" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.05rem', fontWeight: 500 }}>About Course</a>
+            <a href="#learn" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.05rem', fontWeight: 500 }}>What You'll Learn</a>
+            <a href="#why-choose" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.05rem', fontWeight: 500 }}>Why Clinical Psychology</a>
+            <a href="#course-details" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.05rem', fontWeight: 500 }}>Course Details</a>
+            <a href="#careers" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.05rem', fontWeight: 500 }}>Careers</a>
+            <a href="#campus" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.05rem', fontWeight: 500 }}>Campus</a>
+            <a href="#faq" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none', color: '#0f172a', fontSize: '1.05rem', fontWeight: 500 }}>FAQ</a>
             
             <button 
               onClick={() => {
@@ -131,7 +135,7 @@ const Navbar = () => {
               fontWeight: 600,
               cursor: 'pointer',
               fontSize: '1rem',
-              marginTop: '8px'
+              marginTop: '4px'
             }}>
               Apply Now
             </button>

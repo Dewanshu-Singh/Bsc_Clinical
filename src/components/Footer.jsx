@@ -4,65 +4,61 @@ import { MapPin, Phone, Mail } from 'lucide-react'
 const Footer = () => {
   return (
     <footer style={{ 
-      backgroundColor: '#020617', /* Extremely dark slate/blue */
+      backgroundColor: '#020617', 
       color: '#a7b8af',
       padding: '80px 0 40px 0'
     }}>
-      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
           gap: '64px',
+          alignItems: 'flex-start',
           marginBottom: '64px'
         }}>
           
           {/* Column 1: Brand & About */}
-          <div>
+          <div style={{ maxWidth: '560px' }}>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '24px' }}>
               <div style={{ display: 'inline-block' }}>
                 <img 
                   src="/logo2.png" 
                   alt="Suresh Gyan Vihar University Logo" 
-                  style={{ height: '120px', objectFit: 'contain' }} 
+                  style={{ 
+                    height: '140px', 
+                    objectFit: 'contain',
+                    filter: 'drop-shadow(0 4px 10px rgba(0,0,0,0.2))'
+                  }} 
                 />
               </div>
             </div>
-            <p style={{ lineHeight: 1.7, fontSize: '0.95rem' }}>
-              Empowering the next generation of clinical psychologists through rigorous academic training and extensive clinical exposure.
+            <p style={{ lineHeight: 1.75, fontSize: '1rem', color: '#94a3b8' }}>
+              Suresh Gyan Vihar University, Jaipur — Empowering students with scientific understanding, empathy, and professional skills through the 4-Year Bachelor in Clinical Psychology (B.Sc. Clinical Psychology) programme.
             </p>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div>
-            <h4 style={{ color: 'white', fontSize: '1.1rem', fontWeight: 600, marginBottom: '24px', fontFamily: 'var(--font-sans)' }}>Quick Links</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <a href="#overview" style={{ color: '#a7b8af', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>Overview</a>
-              <a href="#advantage" style={{ color: '#a7b8af', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>The RCI Advantage</a>
-              <a href="#admission" style={{ color: '#a7b8af', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>Admission Path</a>
-              <a href="#curriculum" style={{ color: '#a7b8af', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>Curriculum</a>
-            </div>
-          </div>
-
-          {/* Column 3: Contact */}
-          <div>
-            <h4 style={{ color: 'white', fontSize: '1.1rem', fontWeight: 600, marginBottom: '24px', fontFamily: 'var(--font-sans)' }}>Contact Us</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                <MapPin size={20} color="var(--primary-color)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <a href="https://maps.google.com/?q=Suresh+Gyan+Vihar+University,+Jaipur" target="_blank" rel="noopener noreferrer" style={{ color: '#a7b8af', textDecoration: 'none', lineHeight: 1.5, fontSize: '0.95rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>
+          {/* Column 2: Contact */}
+          <div style={{ maxWidth: '420px', justifySelf: 'end' }}>
+            <h4 style={{ color: 'white', fontSize: '1.2rem', fontWeight: 600, marginBottom: '24px', fontFamily: 'var(--font-sans)' }}>
+              Contact SGVU
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+                <MapPin size={22} color="var(--primary-color)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <a href="https://maps.google.com/?q=Suresh+Gyan+Vihar+University,+Jaipur" target="_blank" rel="noopener noreferrer" style={{ color: '#a7b8af', textDecoration: 'none', lineHeight: 1.6, fontSize: '0.98rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>
                   Mahal, Jagatpura, Jaipur<br/>Rajasthan 302017
                 </a>
               </div>
-              <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                <Phone size={20} color="var(--primary-color)" style={{ flexShrink: 0 }} />
-                <a href="tel:18003094545" style={{ color: '#a7b8af', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>
-                  1800 309 4545
+              <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
+                <Phone size={22} color="var(--primary-color)" style={{ flexShrink: 0 }} />
+                <a href="tel:18003094545" style={{ color: '#a7b8af', textDecoration: 'none', fontSize: '0.98rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>
+                  1800 309 4545 (Toll-Free)
                 </a>
               </div>
-              <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                <Mail size={20} color="var(--primary-color)" style={{ flexShrink: 0 }} />
-                <a href="mailto:admissions@sgvu.edu.in" style={{ color: '#a7b8af', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>
+              <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
+                <Mail size={22} color="var(--primary-color)" style={{ flexShrink: 0 }} />
+                <a href="mailto:admissions@sgvu.edu.in" style={{ color: '#a7b8af', textDecoration: 'none', fontSize: '0.98rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color='white'} onMouseLeave={(e) => e.target.style.color='#a7b8af'}>
                   admissions@sgvu.edu.in
                 </a>
               </div>
@@ -73,7 +69,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div style={{ 
-          borderTop: '1px solid rgba(255,255,255,0.05)', 
+          borderTop: '1px solid rgba(255,255,255,0.08)', 
           paddingTop: '32px',
           display: 'flex',
           flexWrap: 'wrap',
@@ -83,7 +79,7 @@ const Footer = () => {
           fontSize: '0.85rem'
         }}>
           <div>
-            &copy; {new Date().getFullYear()} Suresh Gyan Vihar University. All rights reserved.
+            &copy; {new Date().getFullYear()} Suresh Gyan Vihar University, Jaipur. All rights reserved.
           </div>
           
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>

@@ -3,28 +3,28 @@ import { motion } from 'framer-motion'
 
 const images = [
   {
-    src: "/IMG-20260822-WA0039.jpg.jpeg",
-    alt: "University Campus",
+    src: "/campus1.jpg",
+    alt: "University Campus Main View",
     gridArea: "1 / 1 / 3 / 3" // Large left square
   },
   {
-    src: "/IMG-20260822-WA0045.jpg.jpeg",
-    alt: "Campus Facilities",
+    src: "/campus2.jpg",
+    alt: "Campus Facilities & Buildings",
     gridArea: "1 / 3 / 2 / 4" // Top middle square
   },
   {
-    src: "/WhatsApp Image 2026-08-22 at 14.02.10.jpeg",
-    alt: "Student Life",
+    src: "/campus3.jpg",
+    alt: "Lush Green Pathways & Grounds",
     gridArea: "1 / 4 / 2 / 5" // Top right square
   },
   {
-    src: "/WhatsApp Image 2026-08-22 at 14.02.13.jpeg",
-    alt: "Academic Block",
+    src: "/campus4.jpg",
+    alt: "Modern Academic Blocks",
     gridArea: "2 / 3 / 3 / 4" // Bottom middle square
   },
   {
-    src: "/WhatsApp Image 2026-08-22 at 14.02.14.jpeg",
-    alt: "Events",
+    src: "/campus5.jpg",
+    alt: "State-of-the-art Infrastructure",
     gridArea: "2 / 4 / 3 / 5" // Bottom right square
   }
 ]
@@ -36,7 +36,7 @@ const OurCampus = () => {
       padding: '100px 0',
       color: '#1f2937'
     }}>
-      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         
         {/* Header */}
         <motion.div 
@@ -48,7 +48,7 @@ const OurCampus = () => {
         >
           <div style={{ 
             color: 'var(--primary-color)', 
-            fontSize: '0.75rem', 
+            fontSize: '0.78rem', 
             fontWeight: 700, 
             letterSpacing: '2px', 
             textTransform: 'uppercase',
@@ -58,22 +58,22 @@ const OurCampus = () => {
           </div>
           <h2 style={{ 
             fontFamily: 'var(--font-serif)', 
-            fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', 
-            fontWeight: 500,
+            fontSize: 'clamp(2.4rem, 4vw, 3.5rem)', 
+            fontWeight: 600,
             color: '#0f172a',
             lineHeight: 1.2,
-            marginBottom: '24px'
+            marginBottom: '20px'
           }}>
             Experience Life at <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>SGVU</span>
           </h2>
           <p style={{ 
             color: '#4b5563', 
-            fontSize: '1.05rem', 
+            fontSize: '1.08rem', 
             lineHeight: 1.7, 
             maxWidth: '700px', 
             margin: '0 auto' 
           }}>
-            A vibrant, state-of-the-art campus designed to foster academic excellence, clinical practice, and holistic development.
+            A vibrant, state-of-the-art campus in Jaipur designed to foster academic excellence, empirical research, and holistic student growth.
           </p>
         </motion.div>
 
@@ -95,7 +95,7 @@ const OurCampus = () => {
                 gridArea: img.gridArea,
                 borderRadius: '16px',
                 overflow: 'hidden',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.06)',
                 position: 'relative'
               }}
             >
@@ -112,14 +112,13 @@ const OurCampus = () => {
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
               />
-
             </motion.div>
           ))}
         </div>
 
       </div>
       
-      {/* Mobile-friendly overrides (inline style hack for simple grid) */}
+      {/* Mobile-friendly overrides */}
       <style>{`
         @media (max-width: 768px) {
           #campus .container > div:last-child {

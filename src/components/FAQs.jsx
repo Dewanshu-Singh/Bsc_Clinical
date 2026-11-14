@@ -1,37 +1,33 @@
 import React, { useState } from 'react'
-import { Plus, Minus } from 'lucide-react'
+import { Plus, Minus, PhoneCall } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const faqData = [
   {
-    question: "Is this program approved by RCI?",
-    answer: "Yes, the M.Phil in Clinical Psychology at SGVU is fully approved by the Rehabilitation Council of India (RCI). Graduates will be eligible for RCI registration to practice as Clinical Psychologists."
+    question: "What is the duration of the programme?",
+    answer: "The programme duration is four years (8 semesters of full-time undergraduate study)."
   },
   {
-    question: "What is the duration of the course?",
-    answer: "The program is a two-year, full-time regular course of academic and clinical training."
+    question: "What is the semester fee?",
+    answer: "The semester fee is ₹1,00,000, as provided by the university."
   },
   {
-    question: "Are there hospital postings involved?",
-    answer: "Yes. Clinical training is a core component. Students undergo supervised clinical postings in psychiatry departments of affiliated hospitals and mental health centers to gain hands-on experience."
+    question: "What will students study?",
+    answer: "Students study psychology fundamentals, psychological assessment, psychopathology, research methodology and other clinical psychology subjects."
   },
   {
-    question: "What is the eligibility for the entrance exam?",
-    answer: "Candidates must hold an M.A./M.Sc. in Psychology from a UGC-recognized university with a minimum of 55% aggregate marks (50% for SC/ST/OBC/PWD)."
+    question: "Is this an RCI-approved programme?",
+    answer: "SGVU is listed in RCI's approved institutions list for the B.Clin.Psy programme for 2026–27 onwards."
   },
   {
-    question: "Does the program include a stipend?",
-    answer: "Stipend policies are subject to university norms and government regulations for the current academic year. Please contact the admission cell for the latest updates."
-  },
-  {
-    question: "How can I apply for the entrance exam?",
-    answer: "You can apply online through the SGVU admission portal. Fill out the application form, upload your postgraduate transcripts, and pay the application fee to register for the entrance test."
+    question: "Can graduates become Clinical Psychologists?",
+    answer: "This undergraduate qualification leads to a Clinical Assistant pathway, not automatic registration as an independent Clinical Psychologist. RCI registration and professional scope must follow the applicable regulations."
   }
 ]
 
 const AccordionItem = ({ faq, isOpen, onClick }) => {
   return (
-    <div style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+    <div style={{ borderBottom: '1px solid rgba(0,0,0,0.08)' }}>
       <button 
         onClick={onClick}
         style={{ 
@@ -47,18 +43,24 @@ const AccordionItem = ({ faq, isOpen, onClick }) => {
         }}>
         <span style={{ 
           color: '#0f172a',
-          fontSize: '1.05rem',
-          fontWeight: 600
+          fontSize: '1.1rem',
+          fontWeight: 600,
+          paddingRight: '16px',
+          lineHeight: 1.4
         }}>
           {faq.question}
         </span>
         <div style={{ 
-          background: isOpen ? 'var(--primary-color)' : '#f3f4f6',
+          background: isOpen ? 'var(--primary-color)' : '#f1f5f9',
           borderRadius: '50%',
-          padding: '4px',
+          padding: '6px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexShrink: 0,
           transition: 'all 0.3s ease'
         }}>
-          {isOpen ? <Minus size={16} color="white" /> : <Plus size={16} color="#374151" />}
+          {isOpen ? <Minus size={16} color="white" /> : <Plus size={16} color="#334155" />}
         </div>
       </button>
       
@@ -72,9 +74,9 @@ const AccordionItem = ({ faq, isOpen, onClick }) => {
             style={{ overflow: 'hidden' }}
           >
             <p style={{
-              color: '#64748b',
-              fontSize: '0.95rem',
-              lineHeight: 1.6,
+              color: '#475569',
+              fontSize: '1rem',
+              lineHeight: 1.7,
               margin: '0 0 24px 0'
             }}>
               {faq.answer}
@@ -87,7 +89,7 @@ const AccordionItem = ({ faq, isOpen, onClick }) => {
 }
 
 const FAQs = () => {
-  const [openIndex, setOpenIndex] = useState(5)
+  const [openIndex, setOpenIndex] = useState(0)
 
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -108,18 +110,18 @@ const FAQs = () => {
           alignItems: 'flex-start'
         }}>
           
-          {/* Left Column - Heading & Text */}
+          {/* Left Column - Heading & Contact Card */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="faq-sticky-header"
-            style={{ flex: '1 1 400px' }}
+            style={{ flex: '1 1 380px' }}
           >
             <div style={{ 
               color: 'var(--primary-color)', 
-              fontSize: '0.75rem', 
+              fontSize: '0.78rem', 
               fontWeight: 700, 
               letterSpacing: '2px', 
               textTransform: 'uppercase',
@@ -130,18 +132,52 @@ const FAQs = () => {
             
             <h2 style={{ 
               fontFamily: 'var(--font-serif)', 
-              fontSize: 'clamp(3rem, 4vw, 4rem)', 
-              fontWeight: 500,
-              color: '#0f172a', /* Changed to Navy */
-              lineHeight: 1.1,
+              fontSize: 'clamp(2.4rem, 4vw, 3.6rem)', 
+              fontWeight: 600,
+              color: '#0f172a',
+              lineHeight: 1.15,
               marginBottom: '24px'
             }}>
-              Everything you need to <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>know</span>
+              Everything You Need to{' '}
+              <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>Know</span>
             </h2>
             
-            <p style={{ color: '#4b5563', fontSize: '1.05rem', lineHeight: 1.7 }}>
-              Still have questions? Call our toll-free helpline <a href="tel:18003094545" style={{ color: 'var(--primary-color)', textDecoration: 'none', borderBottom: '1px solid var(--primary-color)' }}>1800 309 4545</a> or send an enquiry below.
+            <p style={{ color: '#4b5563', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '32px' }}>
+              Have questions regarding eligibility, fees, or the RCI approval status for B.Clin.Psy? Find clear answers below or contact our admission counseling desk.
             </p>
+
+            <div style={{
+              backgroundColor: '#ffffff',
+              borderRadius: '16px',
+              padding: '24px',
+              border: '1px solid #e2e8f0',
+              boxShadow: '0 4px 15px rgba(0,0,0,0.03)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                <PhoneCall size={22} color="var(--primary-color)" />
+                <span style={{ fontWeight: 600, color: '#0f172a', fontSize: '1rem' }}>Admission Helpline</span>
+              </div>
+              <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: 1.5, marginBottom: '16px' }}>
+                Speak directly with an SGVU academic counselor for the 2026–27 session.
+              </p>
+              <a 
+                href="tel:18003094545" 
+                style={{ 
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: 'var(--primary-color)',
+                  color: 'white',
+                  textDecoration: 'none',
+                  padding: '10px 20px',
+                  borderRadius: '20px',
+                  fontWeight: 600,
+                  fontSize: '0.95rem'
+                }}
+              >
+                Call 1800 309 4545
+              </a>
+            </div>
           </motion.div>
 
           {/* Right Column - Accordion List */}
@@ -150,9 +186,8 @@ const FAQs = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            style={{ flex: '1 1 600px' }}
+            style={{ flex: '1 1 580px' }}
           >
-            {/* Top border for the first item */}
             <div style={{ borderTop: '1px solid rgba(0,0,0,0.1)' }}></div>
             {faqData.map((faq, index) => (
               <AccordionItem 

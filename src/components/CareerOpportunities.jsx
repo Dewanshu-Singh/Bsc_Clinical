@@ -2,44 +2,63 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { 
   Stethoscope, 
-  Brain, 
-  Activity, 
-  Users, 
   HeartHandshake, 
-  Scale, 
-  GraduationCap, 
   Microscope, 
-  Landmark, 
-  Briefcase, 
-  Building2, 
-  Home 
+  Users, 
+  GraduationCap, 
+  AlertTriangle,
+  ArrowRight
 } from 'lucide-react'
 
-const careers = [
-  { name: "Clinical Psychologist", icon: <Stethoscope size={20} color="var(--primary-color)" /> },
-  { name: "Psychotherapist / Counselor", icon: <Brain size={20} color="var(--primary-color)" /> },
-  { name: "Neuropsychologist", icon: <Activity size={20} color="var(--primary-color)" /> },
-  { name: "Child & Adolescent Psychologist", icon: <Users size={20} color="var(--primary-color)" /> },
-  { name: "De-Addiction / Rehab Specialist", icon: <HeartHandshake size={20} color="var(--primary-color)" /> },
-  { name: "University Professor / Lecturer", icon: <GraduationCap size={20} color="var(--primary-color)" /> },
-  { name: "Researcher / Ph.D. Scholar", icon: <Microscope size={20} color="var(--primary-color)" /> },
-  { name: "Govt (NIMHANS / IHBAS / Hospitals)", icon: <Landmark size={20} color="var(--primary-color)" /> },
-  { name: "Corporate Wellness / EAP", icon: <Briefcase size={20} color="var(--primary-color)" /> },
-  { name: "Health / Organizational Psychologist", icon: <Building2 size={20} color="var(--primary-color)" /> },
-  { name: "Private Practice / NGO", icon: <Home size={20} color="var(--primary-color)" /> }
+const careerPathways = [
+  {
+    pathway: "Clinical Assistant",
+    workArea: "Clinical psychology support",
+    description: "Support senior psychologists, assist in psychometric testing, patient intake, and clinical documentation.",
+    icon: <Stethoscope size={24} color="var(--primary-color)" />,
+    tag: "Clinical Setup"
+  },
+  {
+    pathway: "Mental Health Support",
+    workArea: "Mental health services",
+    description: "Work across counselling centers, rehabilitation units, mental wellness clinics, and helpline support systems.",
+    icon: <HeartHandshake size={24} color="var(--primary-color)" />,
+    tag: "Healthcare Services"
+  },
+  {
+    pathway: "Research Assistant",
+    workArea: "Psychological research",
+    description: "Contribute to behavioural research studies, clinical trials, academic publications, and data analysis in psychological institutes.",
+    icon: <Microscope size={24} color="var(--primary-color)" />,
+    tag: "Academic & Research"
+  },
+  {
+    pathway: "Community Mental Health Worker",
+    workArea: "Community programmes",
+    description: "Engage with NGOs, public health initiatives, community outreach programmes, and psycho-education projects.",
+    icon: <Users size={24} color="var(--primary-color)" />,
+    tag: "Public Health & NGOs"
+  },
+  {
+    pathway: "Further Studies",
+    workArea: "Advanced psychology education",
+    description: "Pursue Master's degrees (M.Sc. / M.A. Psychology), specialized post-graduate training, or higher RCI-prescribed professional licensing programmes.",
+    icon: <GraduationCap size={24} color="var(--primary-color)" />,
+    tag: "Higher Education"
+  }
 ]
 
 const CareerOpportunities = () => {
   return (
     <section id="careers" style={{ 
-      backgroundColor: '#0f172a', /* Deep navy blue matching RCIAdvantage */
+      backgroundColor: '#0f172a', 
       padding: '100px 0',
       color: 'white',
       overflow: 'hidden'
     }}>
-      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         
-        {/* Top Area: Heading */}
+        {/* Top Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,63 +68,63 @@ const CareerOpportunities = () => {
         >
           <div style={{ 
             color: 'var(--primary-color)', 
-            fontSize: '0.75rem', 
+            fontSize: '0.78rem', 
             fontWeight: 700, 
             letterSpacing: '2px', 
             textTransform: 'uppercase',
             marginBottom: '16px'
           }}>
-            Life After M.Phil
+            Career Opportunities
           </div>
           <h2 style={{ 
             fontFamily: 'var(--font-serif)', 
-            fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', 
-            fontWeight: 500,
+            fontSize: 'clamp(2.4rem, 4vw, 3.5rem)', 
+            fontWeight: 600,
             color: 'white',
             lineHeight: 1.2
           }}>
-            Career <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>Opportunities</span>
+            Where Can Your Psychology{' '}
+            <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>Journey Take You?</span>
           </h2>
           <p style={{ 
-            color: '#a7b8af', 
-            fontSize: '1.05rem', 
+            color: '#94a3b8', 
+            fontSize: '1.08rem', 
             lineHeight: 1.7, 
-            maxWidth: '700px', 
-            margin: '0 auto',
-            marginTop: '24px'
+            maxWidth: '720px', 
+            margin: '20px auto 0 auto'
           }}>
-            M.Phil Clinical Psychology graduates are in high demand across hospitals, mental health clinics, rehabilitation centers, and academic institutions.
+            Possible pathways after appropriate qualification and further training:
           </p>
         </motion.div>
 
-        {/* Grid of Cards */}
+        {/* Pathways Grid */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
-          gap: '20px' 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+          gap: '24px',
+          marginBottom: '56px'
         }}>
-          {careers.map((career, index) => (
+          {careerPathways.map((item, index) => (
             <motion.div 
               key={index}
               className="mobile-stack-card"
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              whileHover={{ y: -6, boxShadow: '0 15px 30px rgba(0,0,0,0.2)' }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.45, delay: index * 0.08 }}
+              whileHover={{ y: -6, boxShadow: '0 20px 35px rgba(0,0,0,0.3)' }}
               style={{
                 backgroundColor: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.1)',
-                padding: '24px 32px',
-                borderRadius: '16px',
+                borderRadius: '18px',
+                padding: '32px 28px',
                 display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
+                flexDirection: 'column',
                 transition: 'all 0.3s ease',
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'
+                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'
                 e.currentTarget.style.borderColor = 'var(--primary-color)'
               }}
               onMouseLeave={(e) => {
@@ -113,32 +132,92 @@ const CareerOpportunities = () => {
                 e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
               }}
             >
-              {/* Icon Container */}
-              <div style={{ 
-                backgroundColor: 'rgba(37,99,235,0.1)', 
-                borderRadius: '10px', 
-                padding: '12px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0
-              }}>
-                {career.icon}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                <div style={{ 
+                  backgroundColor: 'rgba(37,99,235,0.15)', 
+                  borderRadius: '12px', 
+                  padding: '12px',
+                  display: 'inline-flex'
+                }}>
+                  {item.icon}
+                </div>
+                <span style={{ 
+                  fontSize: '0.72rem', 
+                  fontWeight: 600, 
+                  letterSpacing: '0.5px',
+                  textTransform: 'uppercase',
+                  color: 'var(--primary-color)',
+                  backgroundColor: 'rgba(37,99,235,0.1)',
+                  padding: '4px 10px',
+                  borderRadius: '12px'
+                }}>
+                  {item.tag}
+                </span>
               </div>
               
-              {/* Text */}
-              <span style={{ 
+              <h3 style={{ 
                 color: 'white', 
+                fontSize: '1.3rem', 
                 fontWeight: 600, 
-                fontSize: '0.95rem',
-                fontFamily: 'var(--font-sans)',
-                lineHeight: 1.4
+                marginBottom: '6px',
+                fontFamily: 'var(--font-serif)'
               }}>
-                {career.name}
-              </span>
+                {item.pathway}
+              </h3>
+
+              <div style={{ 
+                color: 'var(--primary-color)', 
+                fontSize: '0.92rem', 
+                fontWeight: 600, 
+                marginBottom: '14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px'
+              }}>
+                <ArrowRight size={15} /> Work Area: {item.workArea}
+              </div>
+
+              <p style={{ 
+                color: '#94a3b8', 
+                fontSize: '0.92rem', 
+                lineHeight: 1.6, 
+                margin: 0,
+                flexGrow: 1
+              }}>
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>
+
+        {/* Regulatory Scope & Disclaimer Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          style={{
+            backgroundColor: 'rgba(245, 158, 11, 0.08)',
+            border: '1px solid rgba(245, 158, 11, 0.3)',
+            borderRadius: '16px',
+            padding: '24px 28px',
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '18px',
+            maxWidth: '1000px',
+            margin: '0 auto'
+          }}
+        >
+          <AlertTriangle size={26} color="#f59e0b" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <div style={{ color: '#fbbf24', fontWeight: 700, fontSize: '0.98rem', marginBottom: '6px' }}>
+              Important Note Regarding Professional Scope
+            </div>
+            <p style={{ color: '#e2e8f0', fontSize: '0.93rem', lineHeight: 1.65, margin: 0 }}>
+              This undergraduate qualification does not itself make graduates independent Clinical Psychologists. RCI registration and professional scope must follow the applicable regulations.
+            </p>
+          </div>
+        </motion.div>
 
       </div>
     </section>

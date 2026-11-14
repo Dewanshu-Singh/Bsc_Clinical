@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Lato', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Lato', system-ui, -apple-system, sans-serif;
+  --font-main: 'Lato', sans-serif;
   
   /* Color Palette - Premium Dark Theme for rest of site */
   --bg-color: #0b0f19;
@@ -36,6 +37,11 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lato', var(--font-sans);
+}
+
+button, input, select, textarea {
+  font-family: 'Lato', var(--font-sans);
 }
 
 ::selection {
@@ -49,7 +55,7 @@ button:focus-visible, a:focus-visible {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: 'Lato', var(--font-sans);
   background: var(--bg-gradient);
   background-color: var(--bg-color);
   color: var(--text-main);

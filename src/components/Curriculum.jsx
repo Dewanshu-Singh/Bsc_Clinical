@@ -1,116 +1,230 @@
 import React from 'react'
-import { CheckCircle2 } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Info } from 'lucide-react'
 
-const curriculumItems = [
-  "Psychopathology (Adult & Child)",
-  "Psychological Assessment & Testing",
-  "Psychotherapy — CBT, Behavior Therapy & more",
-  "Clinical Neuropsychology",
-  "Counseling Skills",
-  "Case History & Mental Status Examination (MSE)",
-  "Research Methodology & Biostatistics",
-  "Clinical Case Work & Supervision",
-  "Dissertation Research",
-  "Community Mental Health Exposure"
+const subjects = [
+  {
+    title: "Fundamentals of Psychology",
+    description: "Understand human behaviour, thoughts, emotions and mental processes.",
+    image: "/IMG-20260822-WA0039.jpg.jpeg",
+    fallback: "/campus1.jpg",
+    tag: "Core Foundation"
+  },
+  {
+    title: "Abnormal Psychology",
+    description: "Explore psychological disorders, their symptoms and underlying factors.",
+    image: "/IMG-20260822-WA0045.jpg.jpeg",
+    fallback: "/campus2.jpg",
+    tag: "Clinical Study"
+  },
+  {
+    title: "Psychological Assessment",
+    description: "Learn the fundamentals of psychological testing and assessment.",
+    image: "/WhatsApp Image 2026-08-22 at 14.02.10.jpeg",
+    fallback: "/campus3.jpg",
+    tag: "Diagnostic Skills"
+  },
+  {
+    title: "Research Methodology",
+    description: "Develop research, observation, analytical and critical-thinking skills.",
+    image: "/WhatsApp Image 2026-08-22 at 14.02.13.jpeg",
+    fallback: "/campus4.jpg",
+    tag: "Empirical Tools"
+  },
+  {
+    title: "Developmental Psychology",
+    description: "Understand psychological development across different stages of life.",
+    image: "/WhatsApp Image 2026-08-22 at 14.02.14.jpeg",
+    fallback: "/campus5.jpg",
+    tag: "Lifespan Dynamics"
+  },
+  {
+    title: "Rehabilitation Psychology",
+    description: "Explore psychological support, recovery and rehabilitation approaches.",
+    image: "/life6.jpg",
+    fallback: "/liblary.jpeg",
+    tag: "Recovery & Care"
+  }
 ]
 
 const Curriculum = () => {
   return (
-    <section id="curriculum" style={{ 
-      backgroundColor: '#fbf9f6', 
+    <section id="learn" style={{ 
+      backgroundColor: '#ffffff', 
       padding: '100px 0',
       color: '#1f2937'
     }}>
-      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         
-        <div style={{ 
-          display: 'flex', 
-          flexWrap: 'wrap', 
-          gap: '64px',
-          alignItems: 'center'
-        }}>
-          
-          {/* Left Column - Placeholder Image */}
-          <div style={{ flex: '1 1 400px' }}>
-            <img 
-              src="/WhatsApp Image 2026-08-22 at 14.02.10.jpeg" 
-              alt="Clinical Training" 
-              style={{
-                width: '100%',
-                height: 'auto',
-                aspectRatio: '4/5',
-                objectFit: 'cover',
-                borderRadius: '24px',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
-              }}
-            />
+        {/* Section Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+          style={{ textAlign: 'center', marginBottom: '64px' }}
+        >
+          <div style={{ 
+            color: 'var(--primary-color)', 
+            fontSize: '0.78rem', 
+            fontWeight: 700, 
+            letterSpacing: '2px', 
+            textTransform: 'uppercase',
+            marginBottom: '16px'
+          }}>
+            What Will You Learn?
           </div>
+          
+          <h2 style={{ 
+            fontFamily: 'var(--font-serif)', 
+            fontSize: 'clamp(2.4rem, 4.2vw, 3.6rem)', 
+            fontWeight: 600,
+            color: '#0f172a',
+            lineHeight: 1.2,
+            marginBottom: '20px'
+          }}>
+            Build Knowledge That{' '}
+            <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>Goes Beyond Textbooks</span>
+          </h2>
+          
+          <p style={{ 
+            color: '#4b5563', 
+            fontSize: '1.08rem', 
+            lineHeight: 1.7, 
+            maxWidth: '750px', 
+            margin: '0 auto' 
+          }}>
+            Explore a comprehensive curriculum blending scientific rigor, psychometrics, behavioural sciences, and practical rehabilitation methods.
+          </p>
+        </motion.div>
 
-          {/* Right Column - Text Content */}
-          <div style={{ flex: '1 1 500px' }}>
-            <motion.div 
+        {/* 6 Visual Cards Grid */}
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+          gap: '30px',
+          marginBottom: '48px'
+        }}>
+          {subjects.map((card, idx) => (
+            <motion.div
+              key={idx}
+              className="mobile-stack-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6 }}
-              style={{ marginBottom: '64px' }}
-            >
-              <div style={{ 
-                color: 'var(--primary-color)', 
-                fontSize: '0.75rem', 
-                fontWeight: 700, 
-                letterSpacing: '2px', 
-                textTransform: 'uppercase',
-                marginBottom: '16px'
-              }}>
-                Rigorous Training
-              </div>
-              <h2 style={{ 
-                fontFamily: 'var(--font-serif)', 
-                fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', 
-                fontWeight: 500,
-                color: '#0f172a',
-                lineHeight: 1.2
-              }}>
-                Curriculum <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>Highlights</span>
-              </h2>
-            </motion.div>
-            
-            <p style={{ color: '#4b5563', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '48px' }}>
-              The RCI-prescribed syllabus blends psychological theory with supervised, hands-on clinical work across hospitals, OPD services and community settings.
-            </p>
-
-            {/* List Grid */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', 
-                gap: '0 32px' 
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              whileHover={{ 
+                y: -8, 
+                boxShadow: '0 20px 40px rgba(0,0,0,0.08)'
+              }}
+              style={{
+                backgroundColor: '#fbf9f6',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                border: '1px solid rgba(0,0,0,0.06)',
+                display: 'flex',
+                flexDirection: 'column',
+                transition: 'all 0.3s ease',
+                cursor: 'pointer'
               }}
             >
-              {curriculumItems.map((item, index) => (
-                <div key={index} style={{ 
-                  display: 'flex', 
-                  alignItems: 'flex-start', 
-                  gap: '12px',
-                  padding: '20px 0',
-                  borderBottom: '1px solid rgba(0,0,0,0.05)'
+              {/* Card Image */}
+              <div style={{ 
+                position: 'relative', 
+                height: '210px', 
+                width: '100%', 
+                overflow: 'hidden',
+                backgroundColor: '#e2e8f0'
+              }}>
+                <img 
+                  src={card.image} 
+                  alt={card.title} 
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = card.fallback;
+                  }}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    transition: 'transform 0.5s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.06)'}
+                  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: '14px',
+                  right: '14px',
+                  backgroundColor: 'rgba(15, 23, 42, 0.85)',
+                  color: 'white',
+                  fontSize: '0.72rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.5px',
+                  textTransform: 'uppercase',
+                  padding: '5px 12px',
+                  borderRadius: '16px',
+                  backdropFilter: 'blur(8px)'
                 }}>
-                  <CheckCircle2 size={20} color="var(--primary-color)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                  <span style={{ color: '#1a3629', fontWeight: 500, lineHeight: 1.5 }}>
-                    {item}
-                  </span>
+                  {card.tag}
                 </div>
-              ))}
-            </motion.div>
-          </div>
+              </div>
 
+              {/* Card Body */}
+              <div style={{ padding: '28px 24px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                <h3 style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: '1.4rem',
+                  fontWeight: 600,
+                  color: '#0f172a',
+                  marginBottom: '12px',
+                  lineHeight: 1.3
+                }}>
+                  {card.title}
+                </h3>
+                
+                <p style={{
+                  color: '#4b5563',
+                  fontSize: '0.96rem',
+                  lineHeight: 1.65,
+                  margin: 0
+                }}>
+                  {card.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Footnote Banner */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          style={{
+            backgroundColor: '#f1f5f9',
+            border: '1px solid #e2e8f0',
+            borderRadius: '14px',
+            padding: '16px 24px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            maxWidth: '850px',
+            margin: '0 auto'
+          }}
+        >
+          <Info size={20} color="var(--primary-color)" style={{ flexShrink: 0 }} />
+          <p style={{ 
+            color: '#64748b', 
+            fontSize: '0.88rem', 
+            fontStyle: 'italic', 
+            margin: 0,
+            lineHeight: 1.5 
+          }}>
+            These are subject-area descriptions, not a confirmed semester-wise SGVU syllabus.
+          </p>
+        </motion.div>
 
       </div>
     </section>
