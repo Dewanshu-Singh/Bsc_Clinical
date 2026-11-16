@@ -54,7 +54,7 @@ const OurCampus = () => {
             textTransform: 'uppercase',
             marginBottom: '16px'
           }}>
-            Our Campus
+            Campus Infrastructure
           </div>
           <h2 style={{ 
             fontFamily: 'var(--font-serif)', 
@@ -64,16 +64,16 @@ const OurCampus = () => {
             lineHeight: 1.2,
             marginBottom: '20px'
           }}>
-            Experience Life at <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>SGVU</span>
+            Explore the Campus of <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>SGVU</span>
           </h2>
           <p style={{ 
             color: '#4b5563', 
             fontSize: '1.08rem', 
             lineHeight: 1.7, 
-            maxWidth: '700px', 
+            maxWidth: '720px', 
             margin: '0 auto' 
           }}>
-            A vibrant, state-of-the-art campus in Jaipur designed to foster academic excellence, empirical research, and holistic student growth.
+            A sprawling, state-of-the-art green campus in Jaipur equipped with modern academic blocks, advanced psychology laboratories, and world-class infrastructure.
           </p>
         </motion.div>
 
