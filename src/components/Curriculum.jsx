@@ -7,43 +7,38 @@ const subjects = [
     title: "Fundamentals of Psychology",
     description: "Understand human behaviour, thoughts, emotions and mental processes.",
     image: "/IMG-20260822-WA0039.jpg.jpeg",
-    fallback: "/campus1.jpg",
-    tag: "Core Foundation"
+    fallback: "/campus1.jpg"
   },
   {
     title: "Abnormal Psychology",
     description: "Explore psychological disorders, their symptoms and underlying factors.",
     image: "/IMG-20260822-WA0045.jpg.jpeg",
     fallback: "/campus2.jpg",
-    tag: "Clinical Study"
+    objectPosition: "top center"
   },
   {
     title: "Psychological Assessment",
     description: "Learn the fundamentals of psychological testing and assessment.",
     image: "/WhatsApp Image 2026-08-22 at 14.02.10.jpeg",
-    fallback: "/campus3.jpg",
-    tag: "Diagnostic Skills"
+    fallback: "/campus3.jpg"
   },
   {
     title: "Research Methodology",
     description: "Develop research, observation, analytical and critical-thinking skills.",
     image: "/WhatsApp Image 2026-08-22 at 14.02.13.jpeg",
-    fallback: "/campus4.jpg",
-    tag: "Empirical Tools"
+    fallback: "/campus4.jpg"
   },
   {
     title: "Developmental Psychology",
     description: "Understand psychological development across different stages of life.",
     image: "/WhatsApp Image 2026-08-22 at 14.02.14.jpeg",
-    fallback: "/campus5.jpg",
-    tag: "Lifespan Dynamics"
+    fallback: "/campus5.jpg"
   },
   {
     title: "Rehabilitation Psychology",
     description: "Explore psychological support, recovery and rehabilitation approaches.",
     image: "/life6.jpg",
-    fallback: "/liblary.jpeg",
-    tag: "Recovery & Care"
+    fallback: "/liblary.jpeg"
   }
 ]
 
@@ -147,27 +142,12 @@ const Curriculum = () => {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
+                    objectPosition: card.objectPosition || 'center center',
                     transition: 'transform 0.5s ease'
                   }}
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.06)'}
                   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                 />
-                <div style={{
-                  position: 'absolute',
-                  top: '14px',
-                  right: '14px',
-                  backgroundColor: 'rgba(15, 23, 42, 0.85)',
-                  color: 'white',
-                  fontSize: '0.72rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.5px',
-                  textTransform: 'uppercase',
-                  padding: '5px 12px',
-                  borderRadius: '16px',
-                  backdropFilter: 'blur(8px)'
-                }}>
-                  {card.tag}
-                </div>
               </div>
 
               {/* Card Body */}
