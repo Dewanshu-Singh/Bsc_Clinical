@@ -235,13 +235,13 @@ html {
   }
   /* Navbar logos scaling */
   .navbar-logos {
-    gap: 8px !important;
+    gap: 12px !important;
   }
-  .navbar-logos img {
-    height: 28px !important;
+  .navbar-logos .main-univ-logo {
+    height: 64px !important;
   }
-  .navbar-logos img:first-child {
-    height: 36px !important;
+  .navbar-logos .accreditation-logo {
+    height: 30px !important;
   }
   /* Form adjustments */
   .admission-form-wrapper {
@@ -278,6 +278,18 @@ html {
   .mobile-scroll-card {
     flex: 0 0 75vw !important;
     scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-logos {
+    gap: 8px !important;
+  }
+  .navbar-logos .main-univ-logo {
+    height: 58px !important;
+  }
+  .navbar-logos .accreditation-logo {
+    height: 26px !important;
   }
 }
 

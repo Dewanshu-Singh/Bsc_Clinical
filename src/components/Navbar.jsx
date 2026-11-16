@@ -28,6 +28,7 @@ const Navbar = () => {
           <img 
             src="/logo2.png" 
             alt="Suresh Gyan Vihar University Logo" 
+            className="main-univ-logo"
             style={{ 
               height: '90px', 
               objectFit: 'contain',
@@ -38,11 +39,13 @@ const Navbar = () => {
         <img 
           src="/naac.png" 
           alt="NAAC Logo" 
+          className="accreditation-logo"
           style={{ height: '38px', objectFit: 'contain' }} 
         />
         <img 
           src="/nirf.png" 
           alt="NIRF Logo" 
+          className="accreditation-logo"
           style={{ height: '38px', objectFit: 'contain' }} 
         />
       </div>
