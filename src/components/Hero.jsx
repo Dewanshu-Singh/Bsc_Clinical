@@ -8,7 +8,7 @@ const Hero = () => {
     name: '',
     email: '',
     phone: '',
-    stream: 'Science (PCB/PCM)'
+    stream: 'Science Stream'
   })
 
   const handleSubmit = (e) => {
@@ -98,7 +98,7 @@ const Hero = () => {
             fontWeight: 400,
             maxWidth: '650px'
           }}>
-            Build a meaningful career in mental health with the 4-year Bachelor in Clinical Psychology programme at Suresh Gyan Vihar University, Jaipur.
+            Build a meaningful career in mental health with the 4-year B.Sc. Clinical Psychology (Hons.) programme at Suresh Gyan Vihar University, Jaipur.
           </p>
 
           {/* CTA Buttons */}
@@ -228,7 +228,7 @@ const Hero = () => {
             Apply Now
           </h3>
           <p style={{ color: 'var(--primary-color)', fontSize: '0.98rem', fontWeight: 600, marginBottom: '22px' }}>
-            B.Sc. Clinical Psychology (4 Years)
+            B.Sc. Clinical Psychology (Hons.) (4 Years)
           </p>
 
           {submitted ? (
@@ -247,7 +247,7 @@ const Hero = () => {
               <CheckCircle size={48} color="#16a34a" style={{ margin: '0 auto 16px auto' }} />
               <h4 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '8px' }}>Application Submitted!</h4>
               <p style={{ fontSize: '0.9rem', color: '#15803d', lineHeight: 1.5, marginBottom: '20px' }}>
-                Thank you for applying. Our SGVU Psychology Admissions Counselor will contact you shortly with the prospectus & guidance.
+                Thank you for applying. Our SGVU Psychology Admissions Counselor will contact you shortly with the entrance test details & guidance.
               </p>
               <button 
                 onClick={() => setSubmitted(false)}
@@ -354,9 +354,8 @@ const Hero = () => {
                     fontSize: '0.92rem'
                   }}
                 >
-                  <option value="Science (PCB/PCM)">10+2 Science (PCB / PCM)</option>
-                  <option value="12th Appearing">10+2 Science (Appearing 2026)</option>
-                  <option value="Other Stream">Other Equivalent Qualification</option>
+                  <option value="Science Stream">10+2 Science Stream</option>
+                  <option value="Equivalent Qualification">Equivalent Qualification</option>
                 </select>
               </div>
 

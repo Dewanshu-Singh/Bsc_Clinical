@@ -22,6 +22,10 @@ const faqData = [
   {
     question: "Can graduates become Clinical Psychologists?",
     answer: "This undergraduate qualification leads to a Clinical Assistant pathway, not automatic registration as an independent Clinical Psychologist. RCI registration and professional scope must follow the applicable regulations."
+  },
+  {
+    question: "What is the eligibility criteria and entrance syllabus?",
+    answer: "Candidates who have completed 12th with Science stream or equivalent are eligible to apply via the SGVU Entrance Test. The preparation syllabus for the entrance test comprises: General Science, Math, Aptitude, Reasoning, Creativity, and Language."
   }
 ]
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Clock, IndianRupee, GraduationCap, MapPin, Building, CheckCircle2, ArrowRight } from 'lucide-react'
+import { Clock, IndianRupee, GraduationCap, MapPin, Building, CheckCircle2, ArrowRight, BookOpen } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const glanceMetrics = [
@@ -19,7 +19,7 @@ const glanceMetrics = [
     icon: <GraduationCap size={28} color="var(--primary-color)" />,
     value: "Undergraduate",
     label: "Programme Level",
-    sub: "Bachelor in Clinical Psychology"
+    sub: "B.Sc. Clinical Psychology (Hons.)"
   },
   {
     icon: <MapPin size={28} color="var(--primary-color)" />,
@@ -39,17 +39,17 @@ const steps = [
   {
     step: "01",
     title: "Apply Online",
-    description: "Submit your preliminary application form with contact details and educational stream."
+    description: "Submit your preliminary application form with contact details and 12th Science stream qualification."
   },
   {
     step: "02",
-    title: "Document Verification",
-    description: "Submit 10+2 Science transcripts (PCB / PCM) for eligibility review under SGVU & RCI norms."
+    title: "Entrance Test",
+    description: "Appear for the SGVU Entrance Test covering General Science, Math, Aptitude, Reasoning, Creativity, and Language."
   },
   {
     step: "03",
     title: "Admission & Enrollment",
-    description: "Complete fee payment for Semester 1 and secure your enrollment for the 2026–27 batch."
+    description: "Verify 12th Science stream documents, complete Semester 1 fee payment, and confirm enrollment."
   }
 ]
 
@@ -91,7 +91,7 @@ const CourseDetails = () => {
             Programme at a <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>Glance</span>
           </h2>
           <p style={{ color: '#4b5563', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: '650px', margin: '16px auto 0 auto' }}>
-            Key highlights of the 4-year Bachelor in Clinical Psychology at Suresh Gyan Vihar University, Jaipur.
+            Key highlights of the 4-year B.Sc. Clinical Psychology (Hons.) programme at Suresh Gyan Vihar University, Jaipur.
           </p>
         </motion.div>
 
@@ -159,7 +159,7 @@ const CourseDetails = () => {
           ))}
         </div>
 
-        {/* Section 7: Eligibility Section */}
+        {/* Section 7: Eligibility & Entrance Test Section */}
         <div id="eligibility" style={{ 
           backgroundColor: '#fbf9f6', 
           borderRadius: '24px', 
@@ -167,7 +167,7 @@ const CourseDetails = () => {
           border: '1px solid rgba(0,0,0,0.05)',
           marginBottom: '64px'
         }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '48px', alignItems: 'center' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '48px', alignItems: 'flex-start' }}>
             <div style={{ flex: '1 1 500px' }}>
               <div style={{ 
                 color: 'var(--primary-color)', 
@@ -177,7 +177,7 @@ const CourseDetails = () => {
                 textTransform: 'uppercase',
                 marginBottom: '14px'
               }}>
-                Eligibility Criteria
+                Eligibility & Entrance
               </div>
               <h3 style={{ 
                 fontFamily: 'var(--font-serif)', 
@@ -193,27 +193,87 @@ const CourseDetails = () => {
                 </span>
               </h3>
               <p style={{ color: '#4b5563', fontSize: '1.08rem', lineHeight: 1.8, marginBottom: '24px' }}>
-                Students who have completed 10+2 with the prescribed Science stream or equivalent qualification may be eligible, subject to the university's admission rules and RCI guidelines.
+                Those who have completed 12th with Science stream or equivalent will be eligible to apply via entrance test, subject to the university's admission rules and RCI guidelines.
               </p>
               
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '28px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <CheckCircle2 size={20} color="var(--primary-color)" style={{ flexShrink: 0 }} />
                   <span style={{ color: '#1e293b', fontSize: '0.98rem', fontWeight: 500 }}>
-                    10+2 pass from a recognized board in prescribed Science Stream (PCB / PCM)
+                    Completed 12th with Science stream or equivalent qualification
                   </span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <CheckCircle2 size={20} color="var(--primary-color)" style={{ flexShrink: 0 }} />
                   <span style={{ color: '#1e293b', fontSize: '0.98rem', fontWeight: 500 }}>
-                    Admissions subject to SGVU rules and RCI regulatory guidelines
+                    Admission is granted on the basis of performance in the SGVU Entrance Test
                   </span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <CheckCircle2 size={20} color="var(--primary-color)" style={{ flexShrink: 0 }} />
                   <span style={{ color: '#1e293b', fontSize: '0.98rem', fontWeight: 500 }}>
-                    Students appearing for Class 12 board examinations in 2026 are also eligible to apply
+                    Admissions subject to SGVU admission rules and applicable RCI guidelines
                   </span>
+                </div>
+              </div>
+
+              {/* Entrance Test Syllabus Box */}
+              <div style={{
+                backgroundColor: '#ffffff',
+                border: '1px solid #e2e8f0',
+                borderRadius: '16px',
+                padding: '24px',
+                boxShadow: '0 4px 15px rgba(0,0,0,0.03)'
+              }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  marginBottom: '10px'
+                }}>
+                  <BookOpen size={20} color="var(--primary-color)" />
+                  <h4 style={{
+                    fontFamily: 'var(--font-serif)',
+                    fontSize: '1.15rem',
+                    fontWeight: 600,
+                    color: '#0f172a',
+                    margin: 0
+                  }}>
+                    Entrance Test Syllabus
+                  </h4>
+                </div>
+                <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '14px' }}>
+                  Syllabus for preparation of entrance test comprises:
+                </p>
+                <div style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '8px'
+                }}>
+                  {[
+                    "General Science",
+                    "Math",
+                    "Aptitude",
+                    "Reasoning",
+                    "Creativity",
+                    "Language"
+                  ].map((sub, idx) => (
+                    <span key={idx} style={{
+                      backgroundColor: 'rgba(37, 99, 235, 0.08)',
+                      color: 'var(--primary-color)',
+                      border: '1px solid rgba(37, 99, 235, 0.18)',
+                      padding: '6px 14px',
+                      borderRadius: '16px',
+                      fontSize: '0.86rem',
+                      fontWeight: 600,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}>
+                      <CheckCircle2 size={13} color="var(--primary-color)" />
+                      {sub}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
