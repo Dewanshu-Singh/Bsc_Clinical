@@ -14,7 +14,7 @@ const Navbar = () => {
       backgroundColor: 'rgba(251, 249, 246, 0.96)', 
       backdropFilter: 'blur(10px)',
       padding: '0 24px', 
-      height: '80px',
+      height: '88px',
       display: 'flex', 
       justifyContent: 'space-between', 
       alignItems: 'center',
@@ -23,14 +23,14 @@ const Navbar = () => {
       top: 0,
       zIndex: 50
     }}>
-      <div className="navbar-logos" style={{ display: 'flex', alignItems: 'center', gap: '16px', height: '100%' }}>
+      <div className="navbar-logos" style={{ display: 'flex', alignItems: 'center', gap: '20px', height: '100%' }}>
         <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
           <img 
             src="/logo2.png" 
             alt="Suresh Gyan Vihar University Logo" 
             className="main-univ-logo"
             style={{ 
-              height: '90px', 
+              height: '110px', 
               objectFit: 'contain',
               filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.08))'
             }} 
@@ -40,13 +40,13 @@ const Navbar = () => {
           src="/naac.png" 
           alt="NAAC Logo" 
           className="accreditation-logo"
-          style={{ height: '38px', objectFit: 'contain' }} 
+          style={{ height: '46px', objectFit: 'contain' }} 
         />
         <img 
           src="/nirf.png" 
           alt="NIRF Logo" 
           className="accreditation-logo"
-          style={{ height: '38px', objectFit: 'contain' }} 
+          style={{ height: '46px', objectFit: 'contain' }} 
         />
       </div>
       
