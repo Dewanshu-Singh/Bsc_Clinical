@@ -77,15 +77,15 @@ const Hero = () => {
           {/* Headline */}
           <h1 style={{ 
             fontFamily: 'var(--font-serif)', 
-            fontSize: 'clamp(2.8rem, 4.8vw, 4.2rem)', 
+            fontSize: 'clamp(2.7rem, 4.8vw, 4.2rem)', 
             color: '#ffffff',
-            fontWeight: 600,
+            fontWeight: 700,
             lineHeight: 1.15,
             marginBottom: '24px'
           }}>
-            Understand the Human Mind.{' '}
-            <span style={{ color: 'var(--primary-color)', fontStyle: 'italic', display: 'block' }}>
-              Make a Difference in Lives.
+            B.Sc. in{' '}
+            <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>
+              Clinical Psychology (Hons.)
             </span>
           </h1>
           
@@ -98,7 +98,7 @@ const Hero = () => {
             fontWeight: 400,
             maxWidth: '650px'
           }}>
-            Build a meaningful career in mental health with the 4-year B.Sc. Clinical Psychology (Hons.) programme at Suresh Gyan Vihar University, Jaipur.
+            Build a meaningful career in mental health with the 4-year undergraduate programme at Suresh Gyan Vihar University, Jaipur — understand the human mind and make a difference in lives.
           </p>
 
           {/* CTA Buttons */}
