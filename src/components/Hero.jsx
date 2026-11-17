@@ -69,7 +69,7 @@ const Hero = () => {
           }}>
             <GraduationCap size={18} color="var(--primary-color)" />
             <span style={{ fontSize: '0.82rem', fontWeight: 700, letterSpacing: '1px' }}>
-              ADMISSIONS 2026–27 • RCI-APPROVED PROGRAMME
+              ADMISSIONS 2026–27 • RCI-APPROVED PROGRAM
             </span>
           </div>
 
@@ -97,7 +97,7 @@ const Hero = () => {
             fontWeight: 400,
             maxWidth: '650px'
           }}>
-            Build a meaningful career in mental health with the 4-year undergraduate programme at Suresh Gyan Vihar University, Jaipur — understand the human mind and make a difference in lives.
+            Build a meaningful career in mental health with the 4-year undergraduate program at Suresh Gyan Vihar University, Jaipur — understand the human mind and make a difference in lives.
           </p>
 
           {/* CTA Buttons */}
@@ -145,7 +145,7 @@ const Hero = () => {
                 transition: 'background-color 0.2s'
               }}
             >
-              Explore Programme
+              Explore Program
             </motion.button>
           </div>
 
@@ -162,7 +162,7 @@ const Hero = () => {
             {[
               { value: '2026–27', label: 'ADMISSIONS OPEN' },
               { value: '4 Years', label: 'UNDERGRADUATE' },
-              { value: 'RCI-Approved', label: 'PROGRAMME' },
+              { value: 'RCI-Approved', label: 'PROGRAM' },
               { value: '₹1,00,000', label: 'PER SEMESTER' }
             ].map((stat, idx) => (
               <div key={idx} style={{

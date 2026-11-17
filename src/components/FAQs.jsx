@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const faqData = [
   {
-    question: "What is the duration of the programme?",
-    answer: "The programme duration is four years (8 semesters of full-time undergraduate study)."
+    question: "What is the duration of the program?",
+    answer: "The program duration is four years (8 semesters of full-time undergraduate study)."
   },
   {
     question: "What is the semester fee?",
@@ -16,8 +16,8 @@ const faqData = [
     answer: "Students study psychology fundamentals, psychological assessment, psychopathology, research methodology and other clinical psychology subjects."
   },
   {
-    question: "Is this an RCI-approved programme?",
-    answer: "SGVU is listed in RCI's approved institutions list for the B.Clin.Psy programme for 2026–27 onwards."
+    question: "Is this an RCI-approved program?",
+    answer: "SGVU is listed in RCI's approved institutions list for the B.Clin.Psy program for 2026–27 onwards."
   },
   {
     question: "Can graduates become Clinical Psychologists?",

@@ -7,7 +7,7 @@ const glanceMetrics = [
     icon: <Clock size={28} color="var(--primary-color)" />,
     value: "4 Years",
     label: "Course Duration",
-    sub: "Full-Time Undergraduate Programme"
+    sub: "Full-Time Undergraduate Program"
   },
   {
     icon: <IndianRupee size={28} color="var(--primary-color)" />,
@@ -18,7 +18,7 @@ const glanceMetrics = [
   {
     icon: <GraduationCap size={28} color="var(--primary-color)" />,
     value: "Undergraduate",
-    label: "Programme Level",
+    label: "Program Level",
     sub: "B.Sc. Clinical Psychology (Hons.)"
   },
   {
@@ -63,7 +63,7 @@ const CourseDetails = () => {
     }}>
       <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         
-        {/* Section 6: Programme at a Glance */}
+        {/* Section 6: Program at a Glance */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,10 +88,10 @@ const CourseDetails = () => {
             color: '#0f172a',
             lineHeight: 1.2
           }}>
-            Programme at a <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>Glance</span>
+            Program at a <span style={{ color: 'var(--primary-color)', fontStyle: 'italic' }}>Glance</span>
           </h2>
           <p style={{ color: '#4b5563', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: '650px', margin: '16px auto 0 auto' }}>
-            Key highlights of the 4-year B.Sc. Clinical Psychology (Hons.) programme at Suresh Gyan Vihar University, Jaipur.
+            Key highlights of the 4-year B.Sc. Clinical Psychology (Hons.) program at Suresh Gyan Vihar University, Jaipur.
           </p>
         </motion.div>
 

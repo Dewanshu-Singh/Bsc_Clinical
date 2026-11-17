@@ -53,7 +53,7 @@ const Overview = () => {
               </p>
               
               <p style={{ color: '#4b5563', fontSize: '1.05rem', lineHeight: 1.75, marginBottom: '20px' }}>
-                The B.Sc. Clinical Psychology (Hons.) programme introduces students to psychological principles, mental health conditions, psychological assessment, research methodologies and evidence-based approaches to mental health support.
+                The B.Sc. Clinical Psychology (Hons.) program introduces students to psychological principles, mental health conditions, psychological assessment, research methodologies and evidence-based approaches to mental health support.
               </p>
 
               <p style={{ color: '#4b5563', fontSize: '1.05rem', lineHeight: 1.75, marginBottom: '40px' }}>
@@ -180,7 +180,7 @@ const Overview = () => {
                   <Sparkles size={22} color="white" />
                 </div>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>4-Year B.Sc. (Hons.) Programme</div>
+                  <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>4-Year B.Sc. (Hons.) Program</div>
                   <div style={{ fontSize: '0.82rem', color: '#cbd5e1' }}>Academic Rigour • Supervised Learning • SGVU Jaipur</div>
                 </div>
               </div>

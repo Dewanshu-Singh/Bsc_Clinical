@@ -51,7 +51,7 @@ const RCIAdvantage = () => {
           
           <div style={{ flex: '1 1 400px', paddingTop: '12px' }}>
             <p style={{ color: '#94a3b8', fontSize: '1.08rem', lineHeight: 1.75, maxWidth: '520px' }}>
-              Suresh Gyan Vihar University (SGVU) is listed in the Rehabilitation Council of India's (RCI) approved institutions list for the B.Clin.Psy programme for 2026–27 onwards — offering a legitimate, structured foundation in psychological science.
+              Suresh Gyan Vihar University (SGVU) is listed in the Rehabilitation Council of India's (RCI) approved institutions list for the B.Clin.Psy program for 2026–27 onwards — offering a legitimate, structured foundation in psychological science.
             </p>
           </div>
         </motion.div>
@@ -85,7 +85,7 @@ const RCIAdvantage = () => {
               RCI Approved List
             </h3>
             <p style={{ color: '#94a3b8', fontSize: '0.96rem', lineHeight: 1.65 }}>
-              SGVU is recognized in RCI's official approved institutions list for the B.Clin.Psy programme starting from the 2026–27 academic year.
+              SGVU is recognized in RCI's official approved institutions list for the B.Clin.Psy program starting from the 2026–27 academic year.
             </p>
           </motion.div>
 
@@ -115,7 +115,7 @@ const RCIAdvantage = () => {
               Structured 4-Year Framework
             </h3>
             <p style={{ color: '#94a3b8', fontSize: '0.96rem', lineHeight: 1.65 }}>
-              A robust 4-year undergraduate programme combining academic learning, psychometrics, research methodology, and supervised exposure.
+              A robust 4-year undergraduate program combining academic learning, psychometrics, research methodology, and supervised exposure.
             </p>
           </motion.div>
 
@@ -145,7 +145,7 @@ const RCIAdvantage = () => {
               Clinical Assistant Pathway
             </h3>
             <p style={{ color: '#94a3b8', fontSize: '0.96rem', lineHeight: 1.65 }}>
-              Provides a recognized pathway towards clinical assistance, mental health support roles, and preparation for higher licensure programmes.
+              Provides a recognized pathway towards clinical assistance, mental health support roles, and preparation for higher licensure programs.
             </p>
           </motion.div>
         </div>
@@ -175,7 +175,7 @@ const RCIAdvantage = () => {
             margin: 0,
             lineHeight: 1.55
           }}>
-            "SGVU is listed in RCI's approved institutions list for the B.Clin.Psy programme for 2026–27 onwards — upholding professional standards, ethical training, and educational transparency."
+            "SGVU is listed in RCI's approved institutions list for the B.Clin.Psy program for 2026–27 onwards — upholding professional standards, ethical training, and educational transparency."
           </p>
         </motion.div>
 

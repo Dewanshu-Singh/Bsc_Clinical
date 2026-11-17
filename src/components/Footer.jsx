@@ -34,7 +34,7 @@ const Footer = () => {
               </div>
             </div>
             <p style={{ lineHeight: 1.75, fontSize: '1rem', color: '#94a3b8' }}>
-              Suresh Gyan Vihar University, Jaipur — Empowering students with scientific understanding, empathy, and professional skills through the 4-Year B.Sc. Clinical Psychology (Hons.) programme.
+              Suresh Gyan Vihar University, Jaipur — Empowering students with scientific understanding, empathy, and professional skills through the 4-Year B.Sc. Clinical Psychology (Hons.) program.
             </p>
           </div>
 

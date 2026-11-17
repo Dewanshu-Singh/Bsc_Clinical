@@ -34,15 +34,15 @@ const careerPathways = [
   },
   {
     pathway: "Community Mental Health Worker",
-    workArea: "Community programmes",
-    description: "Engage with NGOs, public health initiatives, community outreach programmes, and psycho-education projects.",
+    workArea: "Community programs",
+    description: "Engage with NGOs, public health initiatives, community outreach programs, and psycho-education projects.",
     icon: <Users size={24} color="var(--primary-color)" />,
     tag: "Public Health & NGOs"
   },
   {
     pathway: "Further Studies",
     workArea: "Advanced psychology education",
-    description: "Pursue Master's degrees (M.Sc. / M.A. Psychology), specialized post-graduate training, or higher RCI-prescribed professional licensing programmes.",
+    description: "Pursue Master's degrees (M.Sc. / M.A. Psychology), specialized post-graduate training, or higher RCI-prescribed professional licensing programs.",
     icon: <GraduationCap size={24} color="var(--primary-color)" />,
     tag: "Higher Education"
   }
