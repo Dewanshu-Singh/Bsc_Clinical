@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
-import { GraduationCap, ArrowRight, CheckCircle } from 'lucide-react'
+import React, { useEffect } from 'react'
+import { GraduationCap, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
-  const [submitted, setSubmitted] = useState(false)
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    stream: 'Science Stream'
-  })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setSubmitted(true)
-  }
+  useEffect(() => {
+    // Ensure NPF widget script runs
+    const existing = document.querySelector('script[src*="vemwgts.js"]');
+    if (!existing) {
+      const s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://1y4myjn4xm.in6.widgets.nopaperforms.com/vemwgts.js";
+      document.body.appendChild(s);
+    }
+  }, []);
 
   return (
     <section style={{ 
@@ -197,12 +196,13 @@ const Hero = () => {
         {/* Right Column - Admission Form */}
         <div id="apply-form" className="admission-form-wrapper" style={{ 
           flex: '1 1 350px',
-          maxWidth: '440px',
+          maxWidth: '460px',
           backgroundColor: '#ffffff',
           borderRadius: '24px',
-          padding: '36px 30px',
+          padding: '28px 24px',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)',
-          border: '1px solid rgba(255,255,255,0.2)'
+          border: '1px solid rgba(255,255,255,0.2)',
+          minHeight: '450px'
         }}>
           <div style={{ 
             display: 'inline-block',
@@ -227,164 +227,15 @@ const Hero = () => {
           }}>
             Apply Now
           </h3>
-          <p style={{ color: 'var(--primary-color)', fontSize: '0.98rem', fontWeight: 600, marginBottom: '22px' }}>
+          <p style={{ color: 'var(--primary-color)', fontSize: '0.95rem', fontWeight: 600, marginBottom: '18px' }}>
             B.Sc. Clinical Psychology (Hons.) (4 Years)
           </p>
 
-          {submitted ? (
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              style={{
-                backgroundColor: '#f0fdf4',
-                border: '1px solid #bbf7d0',
-                borderRadius: '16px',
-                padding: '32px 20px',
-                textAlign: 'center',
-                color: '#166534'
-              }}
-            >
-              <CheckCircle size={48} color="#16a34a" style={{ margin: '0 auto 16px auto' }} />
-              <h4 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '8px' }}>Application Submitted!</h4>
-              <p style={{ fontSize: '0.9rem', color: '#15803d', lineHeight: 1.5, marginBottom: '20px' }}>
-                Thank you for applying. Our SGVU Psychology Admissions Counselor will contact you shortly with the entrance test details & guidance.
-              </p>
-              <button 
-                onClick={() => setSubmitted(false)}
-                style={{
-                  backgroundColor: 'white',
-                  border: '1px solid #16a34a',
-                  color: '#16a34a',
-                  padding: '8px 18px',
-                  borderRadius: '20px',
-                  fontWeight: 600,
-                  fontSize: '0.85rem',
-                  cursor: 'pointer'
-                }}
-              >
-                Submit another response
-              </button>
-            </motion.div>
-          ) : (
-            <form style={{ display: 'flex', flexDirection: 'column', gap: '14px' }} onSubmit={handleSubmit}>
-              <div>
-                <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#4b5563', marginBottom: '6px' }}>
-                  Student Full Name*
-                </label>
-                <input 
-                  type="text" 
-                  placeholder="e.g. Ananya Sharma" 
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  style={{
-                    width: '100%',
-                    padding: '12px 14px',
-                    backgroundColor: '#f9fafb',
-                    border: '1px solid #e5e7eb',
-                    borderRadius: '10px',
-                    color: '#1f2937',
-                    outline: 'none',
-                    fontSize: '0.92rem'
-                  }}
-                />
-              </div>
-
-              <div>
-                <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#4b5563', marginBottom: '6px' }}>
-                  Email Address*
-                </label>
-                <input 
-                  type="email" 
-                  placeholder="name@example.com" 
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  style={{
-                    width: '100%',
-                    padding: '12px 14px',
-                    backgroundColor: '#f9fafb',
-                    border: '1px solid #e5e7eb',
-                    borderRadius: '10px',
-                    color: '#1f2937',
-                    outline: 'none',
-                    fontSize: '0.92rem'
-                  }}
-                />
-              </div>
-
-              <div>
-                <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#4b5563', marginBottom: '6px' }}>
-                  Mobile Number*
-                </label>
-                <input 
-                  type="tel" 
-                  placeholder="+91 98765 43210" 
-                  required
-                  value={formData.phone}
-                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  style={{
-                    width: '100%',
-                    padding: '12px 14px',
-                    backgroundColor: '#f9fafb',
-                    border: '1px solid #e5e7eb',
-                    borderRadius: '10px',
-                    color: '#1f2937',
-                    outline: 'none',
-                    fontSize: '0.92rem'
-                  }}
-                />
-              </div>
-
-              <div>
-                <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#4b5563', marginBottom: '6px' }}>
-                  10+2 Qualification / Stream*
-                </label>
-                <select 
-                  value={formData.stream}
-                  onChange={(e) => setFormData({...formData, stream: e.target.value})}
-                  style={{
-                    width: '100%',
-                    padding: '12px 14px',
-                    backgroundColor: '#f9fafb',
-                    border: '1px solid #e5e7eb',
-                    borderRadius: '10px',
-                    color: '#1f2937',
-                    outline: 'none',
-                    fontSize: '0.92rem'
-                  }}
-                >
-                  <option value="Science Stream">10+2 Science Stream</option>
-                  <option value="Equivalent Qualification">Equivalent Qualification</option>
-                </select>
-              </div>
-
-              <div style={{ fontSize: '0.75rem', color: '#6b7280', lineHeight: 1.4, marginTop: '2px' }}>
-                Course Fee: ₹1,00,000 / Semester • Duration: 4 Years
-              </div>
-
-              <motion.button 
-                type="submit" 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  backgroundColor: 'var(--primary-color)',
-                  color: 'white',
-                  border: 'none',
-                  padding: '14px',
-                  borderRadius: '12px',
-                  fontSize: '0.98rem',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  marginTop: '8px',
-                  boxShadow: '0 4px 14px var(--primary-glow)',
-                  transition: 'background-color 0.2s'
-                }}
-              >
-                Submit Application
-              </motion.button>
-            </form>
-          )}
+          <div 
+            className="npf_wgts" 
+            data-height="400px" 
+            data-w="2ae592f0d01284212ec30f85b1898a7b"
+          ></div>
         </div>
 
       </div>

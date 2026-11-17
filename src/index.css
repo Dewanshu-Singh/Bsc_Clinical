@@ -298,3 +298,14 @@ html {
   top: 100px;
   z-index: 10;
 }
+
+/* NoPaperForms Widget styles */
+.npf_wgts {
+  width: 100% !important;
+  min-height: 400px;
+}
+.npf_wgts iframe {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 8px;
+}
